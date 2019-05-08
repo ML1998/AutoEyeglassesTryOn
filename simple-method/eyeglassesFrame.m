@@ -1,6 +1,21 @@
-function [coeff,edgeI] = eyeglasses(dilatedI)
+function [coeff,edgeI] = eyeglassesFrame(dilatedI)
 
-% The size of glasses
+% Input:
+%   A BW image of front eyeglasses frame
+% Output:
+%   coeff: A struct to store image coefficients
+
+%   edgeI: detected edge using matlab function
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Auto Eye-glasses Try on System:                          %
+%                                                          %
+% Copyright (C) 2019 Mingyu Lei. All rights reserved.      %
+%                    mingyulei98@gmail.com                 %
+%                                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Find the edge and size of eyeglasses
 
 edgeI = edge(dilatedI(:,:,1));
 figure;
