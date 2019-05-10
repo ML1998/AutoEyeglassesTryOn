@@ -72,7 +72,7 @@ end
 
 % Find the right most up and most down point of the eyeglass
 minHXR = m;
-for y = n/2:n
+for y = round(n/2):n
     for x = 1:m
         if(edgeI(x,y) == 1)
             if(minHXR>x)
@@ -112,6 +112,6 @@ plot(coeff.rcenter(1),coeff.rcenter(2),'*');
 distance = minHYR - minHYL;
 height = maxHXL-minHXL;
 coeff.size = [width,distance,height];
-   
+
 end
 
